@@ -1,0 +1,15 @@
+
+{% block content %}
+<h2>HELLO, {{ name }}!</h2>
+<p>You are using the service <strong>{{ service }}</strong> right now.</p>
+<h2>YOUR Domain <strong>{{ domain }}</strong> HAS THE FOLLOWING {{ count }} SIMILAR NAMES:</h2>
+
+<h2><strong>Similar Domain Names:</strong></h2>
+    {% for item in fuzz %}
+
+        <p><strong>Name:</strong><br>
+            {{ item }} </p>
+
+    {% endfor %}
+
+{% endblock %}
